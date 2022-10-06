@@ -1,0 +1,54 @@
+package Question1;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		List<Product> list = new ArrayList<>();
+		Scanner sc  = new  Scanner(System.in);
+		
+		for(int a = 0;a<2;a++) {
+			
+			System.out.println("Enter id");
+			int productId = sc.nextInt();
+			
+			System.out.println("Enter name");
+			String productName = sc.next();
+			
+			System.out.println("Enter price");
+			int price = sc.nextInt();
+			
+			Product prs = new Product(productId, productName, productId);
+			list.add(prs);
+			
+		}
+		
+		System.out.println("1 2 3");
+		int num = sc.nextInt();
+		
+		
+		
+		if(num == 1) {			
+			 Set<Product> products = new  TreeSet<>();
+			 for(Product pr : list) {
+				products.add(pr);
+			 }
+			 
+			 for(Product price : products) {
+				 System.out.println(price);
+			 }
+			 
+		}
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+package Question6;
+
+public class PassingLambda {
+
+	public static void main(String[] args) {
+		
+		System.out.println(getOutput(10,10,10,(a, b, c) -> a+b+c));
+		
+		
+
+	}
+	
+     public static int getOutput(int a, int b,int c,Calculator operation) {
+		
+    	 return operation.getOutput(a, b, c);
+	}
+
+}
+
+
+interface Calculator{
+	
+	 int getOutput(int a, int b,int c);
+
+	
+}

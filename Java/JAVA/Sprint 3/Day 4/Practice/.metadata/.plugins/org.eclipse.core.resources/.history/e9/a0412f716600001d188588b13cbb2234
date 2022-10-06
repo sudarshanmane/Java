@@ -1,0 +1,9 @@
+package Person;
+
+public class Student {
+	
+	int studentId ;
+	String courseEnrolled ;
+	int courseFee ;
+
+}

@@ -1,0 +1,21 @@
+
+public class GenericMethods {
+	
+	public static void main(String[] args) {
+		
+		Integer[] num = {1,2,3,4,5};
+		printArray(num);
+		
+	Character[] c = {'c','a','t'};
+	printArray(c);
+	}
+	
+	
+	
+	public static <E> void printArray(E[] elements) {
+		for(E element: elements) {
+			System.out.println(element);
+		}
+	}
+
+}

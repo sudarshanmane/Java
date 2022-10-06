@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;Student.roll&apos; in &apos;Student&apos;&#x0D;&#x0A;- Original project: &apos;Student&apos;&#x0D;&#x0A;- Original element: &apos;Student.roll&apos;&#x0D;&#x0A;- Getter method name: &apos;getRoll&apos;&#x0D;&#x0A;- Setter method name: &apos;setRoll&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;roll&apos;" flags="589830" getter="getRoll" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;{Student.java[Student^roll" insertion="-1" setter="setRoll" stamp="1657461473811" version="1.0" visibility="1"/>
+</session>

@@ -1,0 +1,9 @@
+package Question6;
+
+public class ReruningLambda {
+
+	public static void main(String[] args) {
+		System.out.println("one");
+	}
+
+}

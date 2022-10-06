@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+
+
+public class wEmployee {
+	
+	int calculateAverage(int[] age){
+		
+		int sumOfAge  = 0;
+		
+		for(int a = 0;a<age.length ;a++) {
+			
+			sumOfAge = sumOfAge + age[a];
+			
+		}
+		return sumOfAge;
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter No of Employees");
+		int noOfEmployee = input.nextInt();
+		
+		if(noOfEmployee < 2 ) {
+			System.out.println("Please enter a valid employee count");
+		}else {
+			
+			Employee employee =new Employee();
+			
+			System.out.println("Enter the age for "+ noOfEmployee + " employees : ");
+			int totalEmployee = input.nextInt();
+			
+			int[] age = new int[totalEmployee];
+			
+			for(int a = 0;a<noOfEmployee;a++) {
+				
+				age[a] = input.nextInt();
+				
+			}
+			
+			
+			System.out.println(" The average age is : " + employee.calculateAverage(age));
+			
+			
+			
+		}
+	}
+
+}

@@ -1,0 +1,58 @@
+package Question22;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ThreadToBExcecute {
+	
+    public static void main(String[] args) {
+    	    	
+      	Thread1[] thread1s = {
+      			new Thread1("One"),
+      			new Thread1("Two"),
+      			new Thread1("Three"),
+      			new Thread1("Four"),
+      			new Thread1("Five"),
+
+      			
+    	};
+      	
+      	ExecutorService  executorService  = Executors.newFixedThreadPool(3);
+      	
+      	for(Thread1 thread1 : thread1s) {
+      		
+      		executorService.submit(thread1);
+      		
+      	}
+      	
+      	executorService.shutdown();
+    	
+	}	
+}
+
+
+class Thread1 extends Thread{
+	
+	String task;
+	
+	public Thread1(String task) {
+		this.task = task;
+	}
+
+	
+	@Override
+	public void run() {
+		synchronized (Thread1.class) {
+			try {
+				Thread.sleep(4000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println("This is " + task+" task");
+
+		}
+		
+	}
+	
+}

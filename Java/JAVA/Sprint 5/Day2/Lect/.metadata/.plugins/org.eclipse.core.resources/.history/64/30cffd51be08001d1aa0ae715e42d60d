@@ -1,0 +1,42 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+public class AgeCalcualator {
+	
+	public int getAge(String dob) {
+		
+		
+		try {	
+			
+			LocalDate ld = LocalDate.parse(dob,DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+			
+			
+		}catch(Exception e) {
+			
+		}
+		
+		return 1;
+	}
+	
+	
+	
+	
+	
+
+
+
+
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your birth date ");
+		String dob = sc.next();
+		
+		
+
+		
+	}
+
+}

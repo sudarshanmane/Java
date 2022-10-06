@@ -1,0 +1,45 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class MyGenerics {
+	
+	public static void main(String[] args) {
+		
+		MyOwnGenerics<String> t = new MyOwnGenerics<>();
+		t.add("one");
+		t.add("two");
+		System.out.println(t);
+		
+	}
+	
+	
+	
+
+}
+
+
+class MyOwnGenerics<T> {
+	
+	 ArrayList<T> obj;
+	
+	void add(T object) {
+	
+		obj.add(object);
+		
+	}
+
+	@SuppressWarnings("unchecked")
+	
+	T get() {
+		
+		return (T) obj;
+	}
+
+	@Override
+	public String toString() {
+		return "MyOwnGenerics [obj=" + obj + "]";
+	}
+	
+	
+	
+}

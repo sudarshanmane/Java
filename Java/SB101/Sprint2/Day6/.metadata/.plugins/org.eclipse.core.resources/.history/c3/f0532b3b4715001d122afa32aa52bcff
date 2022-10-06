@@ -1,0 +1,12 @@
+package FilesIO;
+
+import java.io.File;
+
+public class _1FilesIO {
+
+	public static void main(String[] args) {
+		
+		File file = new File("Desktop://abx.txt");
+		
+	}
+}

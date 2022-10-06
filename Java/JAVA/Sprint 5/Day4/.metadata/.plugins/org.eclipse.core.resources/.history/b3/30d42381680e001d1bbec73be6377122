@@ -1,0 +1,31 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Map<String, String> hmp  = new HashMap<>();
+		
+		hmp.put("Maharashtra", "Mumbai");
+		hmp.put("Manipur", "Imphal");
+		hmp.put("Meghalaya", "Shillong");
+		hmp.put("Mizoram", "Aizawl");
+		hmp.put("Nagaland", "Kohima");
+		
+		Set<Map.Entry<String, String>> stAndCapitals = hmp.entrySet();
+		
+		System.out.println("Some States and their Campitals");
+		System.out.println("-------------->");
+		
+		
+		stAndCapitals.forEach(print -> System.out.println(print.getKey() + "-----" + print.getValue()));
+
+		
+		
+		
+
+	}
+
+}

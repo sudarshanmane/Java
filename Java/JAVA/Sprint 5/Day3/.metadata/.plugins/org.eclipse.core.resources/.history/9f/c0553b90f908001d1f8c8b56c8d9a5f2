@@ -1,0 +1,23 @@
+import java.security.AllPermission;
+import java.util.ArrayList;
+
+public class CollectArray {
+
+	
+public static void main(String[] args) {
+		
+		ArrayList<String> al = new ArrayList<>();
+		
+		al.add("One");
+		al.add("two");		
+		
+		String st = (String) al.get(0);
+		System.out.println(st);
+
+		
+		
+		
+		
+	}
+
+}

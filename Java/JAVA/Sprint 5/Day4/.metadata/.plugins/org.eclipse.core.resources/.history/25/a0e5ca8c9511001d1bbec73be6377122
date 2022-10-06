@@ -1,0 +1,89 @@
+package Question1;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Mobile {
+	
+	
+	HashMap<String,ArrayList<String>> mobiles = new HashMap<>();
+	
+	public String addMobile(String company, String model) {
+		
+		ArrayList<String> list =  new ArrayList<>();
+		list.add(model);
+		
+		mobiles.put(company, list);
+		return "Mobile Added" ;
+		
+	}
+
+	
+	public List<String> getModels(String company)throws InvalidMobileException{
+		
+		
+		Set<Map.Entry<String , ArrayList<String>>> en = mobiles.entrySet();
+		
+		List<String> list = new ArrayList<>();
+		
+		for(Map.Entry<String, ArrayList<String>> entry : en) {
+			
+		    if(company.equals(entry.getKey())) {
+		      list.add(entry.getKey());
+		    }    
+		    if(list.size() != 0) {
+		    	return list;
+		    }else {
+		    	
+		    	InvalidMobileException exception = new  InvalidMobileException("InvalidMobileException");
+		    	throw exception;
+		    	
+		    }
+		}
+ 		
+		
+		
+		return list;
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Mobile mobile = new  Mobile();
+		ArrayList<String> arrayList =  new  ArrayList<>();
+		arrayList.add("Two");
+		arrayList.add("three");
+		
+		System.out.println(mobile.addMobile("one", "Two"));
+		System.out.println(mobile.addMobile("three", "four"));
+		System.out.println(mobile.addMobile("one", "six"));
+		System.out.println(mobile.addMobile("seven", "Eight"));
+		
+		try {
+			
+			List<String>  list = mobile.getModels("one");
+			System.out.println(list);
+			
+			
+		}catch(Exception e) {
+			
+			System.out.println(e.getMessage());
+			
+		}
+
+		
+		
+		
+		
+		
+
+	}
+
+}

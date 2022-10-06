@@ -1,0 +1,18 @@
+package _2LamdaInterface;
+
+public class LamdaLastOne {
+	
+	public static void main(String[] args) {
+		
+		LastOne lastOne = ()-> System.out.println("Hellow There");
+		lastOne.hellow();
+		
+	}
+
+}
+
+@FunctionalInterface
+interface LastOne{
+	
+	abstract void hellow();
+}

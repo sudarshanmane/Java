@@ -1,0 +1,26 @@
+package Question4;
+
+import java.util.Scanner;
+
+class Main{
+    	
+    	
+    	public static void main(String[] args) {
+    		Test t=new Test();
+    	 
+    		Scanner input  = new Scanner(System.in);
+    		
+    		
+    		System.out.println("Enter the number");
+    		int providedNumber = input.nextInt();
+    		
+    		int[] arr = t.display(providedNumber);
+    		
+    		String output = "";
+    		for(int a = 0;a<arr.length-1;a++) {
+    			output = output + arr[a] + " ";	
+    		}
+    		
+    		System.out.println(output);
+}
+}

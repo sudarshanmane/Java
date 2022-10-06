@@ -1,0 +1,49 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+//		
+//		LocalDate ld = LocalDate.now();
+//		System.out.println(ld);
+//		
+//		LocalDateTime ldt = LocalDateTime.now();
+//		System.out.println(ldt);
+////		
+//		LocalDate ldo = LocalDate.of(2021,Month.APRIL,20);
+//		System.out.println(ldo);
+		
+//		LocalDate date = LocalDate.now();
+//		
+//		LocalDate yest = date.minusDays(1);
+//		
+//		LocalDate tomm = yest.plusDays(2);
+//		System.out.println(yest);
+//		System.out.println(tomm);
+//		
+		
+//		DateTimeFormatter forObj = DateTimeFormatter.ofPattern("dd-mm-yyyy hh:mm:ss");
+//		
+//		LocalDateTime  current = LocalDateTime.now();
+//		System.out.println(current);
+//
+//		
+//		String ufd = current.format(forObj);
+//		System.out.println(ufd);
+//	}
+		
+		DateTimeFormatter formatobj = DateTimeFormatter.ofPattern("dd/mm/yyyy");
+		LocalDate current = LocalDate.now();
+		
+		String udf = current.format(formatobj);
+//
+		System.out.println(udf);
+//		
+		
+	}
+	
+}

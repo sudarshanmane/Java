@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class UserRegistration {
+	
+	
+	public void registerUser(String username,String userCountry) throws InvalidCountryException{
+		
+		System.out.println(userCountry);
+		
+		if(userCountry != "India"){
+			InvalidCountryException ice = new InvalidCountryException("User Outside India cannot be registered");
+			throw ice;
+			
+			
+		}else {
+			
+			
+			System.out.println("User registration done successfully");
+
+			
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		
+		
+		UserRegistration ur = new UserRegistration();
+		
+		
+		try {
+			Scanner sc = new Scanner(System.in);
+
+			System.out.println("Enter username");
+			String userName = sc.nextLine();
+			
+			System.out.println("Enter coutry");
+			String country =  sc.nextLine();
+			
+//			System.out.println(country);
+//			System.out.println(userName);
+//			
+			
+
+			
+			ur.registerUser(userName,country);	
+			
+		}catch(InvalidCountryException ice) {
+			
+			System.out.println(ice.getMessage());
+			
+		}
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

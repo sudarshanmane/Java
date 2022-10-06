@@ -1,0 +1,27 @@
+package CreatngThread;
+
+public class CThread {
+	
+	public static void main(String[] args) {
+		
+		MyThreadFirstWay firstWay = new MyThreadFirstWay();	
+		firstWay.run();
+		
+	}
+
+	
+	
+}
+
+//1st Way
+//extending threadClass
+
+
+class MyThreadFirstWay extends Thread{
+	@Override
+	public void run() {
+		System.out.println("MyThreadFirstWay");
+	}
+	
+	
+}

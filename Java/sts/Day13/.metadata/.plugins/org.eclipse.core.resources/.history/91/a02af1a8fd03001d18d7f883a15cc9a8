@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class Main {
+	
+
+	static Scanner input = new Scanner(System.in);
+	
+	public static Employee getEmployeeDetails() {
+		
+		
+		System.out.println("Enter the employee id");
+		int id  = input.nextInt();
+
+		
+		System.out.println("Enter the Name");
+		String  name = input.nextLine();
+
+		
+		input.nextLine();
+		
+		System.out.println("Enter the employee Salary");
+		double  salary = input.nextInt();
+		
+		static Employee employee1 = new Employee( name,  id , salary);
+		
+		
+		
+		return employee1 ;
+		
+	}
+	
+	public static int getPFPercentage() {
+		
+		static Employee employeeForPf = new Employee();
+		
+		System.out.println("Enter the employee pfPercentage");
+		int pfPercentage  = input.nextInt();
+		
+		employeeForPf.calculateNetSalary(pfPercentage);
+		
+		return pfPercentage;
+		
+		
+
+				
+		
+	}
+
+	public static void main(String[] args) {
+		
+		getEmployeeDetails();
+		getPFPercentage();
+		
+		
+		
+		getEmployeeDetails().DisplayDetails();
+		System.out.println("Net Salary : " + getPFPercentage());
+	}
+
+}

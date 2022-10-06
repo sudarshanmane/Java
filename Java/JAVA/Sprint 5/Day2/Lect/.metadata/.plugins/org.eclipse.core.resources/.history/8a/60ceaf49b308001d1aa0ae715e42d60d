@@ -1,0 +1,59 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.Scanner;
+
+public class EmployeeBonus {
+	
+	public  static double getBonus(String joningDate)throws InvalidAgeException {
+		
+ 	   double bonus  = 0 ;
+ 	   
+       try {
+    	   
+			LocalDate joining = LocalDate.parse(joningDate,DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+			LocalDate ld = LocalDate.now();
+			
+			int ageDiff = (int) (ChronoUnit.YEARS.between(joining, ld));
+			if(ageDiff < 0 ){
+				InvalidAgeException iae = new InvalidAgeException("Age should not be in the future");
+				throw iae;
+             }else if(ageDiff <1 ) {
+				bonus = 5000;
+			}else if(ageDiff ==1 || ageDiff < 2){
+				bonus = 8000;	
+			}else if(ageDiff >2){
+				bonus = 10000;
+			}
+			
+		}catch(Exception e) {
+			
+			InvalidAgeException iae = new InvalidAgeException("Please pass the date in the correct format");
+			throw iae;
+		}
+		return bonus;
+	}
+	
+	
+	public static void main(String[] args)  {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Your Joining Date in dd/MM/yyyy format");
+		String joiningDate = sc.next();
+		
+		try {
+			
+			getBonus(joiningDate);
+			
+		}catch(InvalidAgeException iae) {
+			System.out.println(iae.getMessage());
+		}
+		
+		
+		
+	}
+
+	
+
+}

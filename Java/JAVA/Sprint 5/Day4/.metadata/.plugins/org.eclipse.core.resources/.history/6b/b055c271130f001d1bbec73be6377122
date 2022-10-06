@@ -1,0 +1,37 @@
+package Question2;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Set<Employee> em = new TreeSet<>(new EmolyeeSalary());
+		Scanner sc = new Scanner(System.in);
+		
+		for(int a = 0;a<2;a++) {
+			
+			System.out.println("enter id");
+			int id = sc.nextInt();
+			
+			System.out.println("enter name");
+			String name = sc.next();
+			
+			System.out.println("enter salary");
+			double salary = sc.nextDouble();
+			
+			Employee employee = new Employee(id, name, salary);
+			em.add(employee);
+			
+		}
+	
+		for(Employee ems : em) {
+			System.out.println(ems);
+		}
+		
+	}
+	
+	
+
+}

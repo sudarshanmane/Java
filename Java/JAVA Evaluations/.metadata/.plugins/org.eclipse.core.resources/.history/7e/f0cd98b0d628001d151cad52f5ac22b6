@@ -1,0 +1,19 @@
+package evaluation3;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		
+		OLA ola = new OLA();
+		
+	   int total = ola.calculateBill(ola.bookCar(2, 10));
+		System.out.println(total);
+		
+		
+		   int total1 = ola.calculateBill(ola.bookCar(4, 10));
+			System.out.println(total1);
+		
+	}
+
+}

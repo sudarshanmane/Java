@@ -1,0 +1,12 @@
+
+public class PlayList {
+	
+	
+	public List<Song> songs = new ArrayList<>();
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

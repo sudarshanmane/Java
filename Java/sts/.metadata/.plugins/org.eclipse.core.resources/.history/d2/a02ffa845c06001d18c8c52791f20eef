@@ -1,0 +1,45 @@
+package Citizen;
+
+import java.util.Scanner;
+
+public class Demo {
+	
+	public boolean validate(String name, String mobileNum, String aadharCard) {
+		
+		boolean name1 = name.matches("[a-zA-Z]{3,8}"); 
+		System.out.println(name1);
+		boolean mobileNum1 = mobileNum.matches("[6789]{1}[0-9]{9}");
+		System.out.println(mobileNum1);
+
+		boolean aadharCard1 = aadharCard.matches("[0-9]{12}");
+		System.out.println(aadharCard1);
+
+		
+		return name1 && mobileNum1 && aadharCard1;
+	}
+
+	
+	public static void main(String[] args) {
+		
+		
+		Demo d = new Demo();
+		Scanner inp = new Scanner(System.in);
+		
+		System.out.println("Enter Name");
+		String name = inp.next();
+		
+		System.out.println("Enter mobile number");
+		String mobileNum = inp.next();
+		
+		System.out.println("Enter aadhar number"
+				+ "");
+		String aadharCard = inp.next();
+		
+		
+		boolean value = d.validate(name,mobileNum,aadharCard);
+		System.out.println(value);
+				
+	}
+
+
+}

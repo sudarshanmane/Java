@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class PlayList {
+	
+	
+		
+		public List<Song> songs = new ArrayList<>();
+		
+	 public void addSong(Song song) {
+		 		
+		 if(songs.size() == 0 ) {
+			 songs.add(song);
+			 System.out.println("Song added to the playlist successfully.");
+		 }else if(songs.size()>=1){
+			 
+			 for(int a = 0;a<songs.size();a++){
+						 int n = 0; 
+					if(songs.get(a).hashCode() != song.hashCode()) {
+						songs.add(song);
+						System.out.println("Song added to the playlist successfully");	
+						n=1;
+						break;
+					}else if(n==0) {
+						 System.out.println("Song is already added in the playlist");
+						 break;
+					 }
+			 }
+		 }
+		 
+		 
+		 
+	 }
+	 
+	 void callPlay() {
+		 
+		 for(Song song1 : songs) {
+			 
+			 String sName = song1.getSongName();
+			 String mName = song1.getMovieName();
+			 Song sm = new Song(sName,mName);
+			 sm.play();
+			 
+		 }
+	 }
+	 
+	 
+
+	
+	
+		 
+	
+
+}

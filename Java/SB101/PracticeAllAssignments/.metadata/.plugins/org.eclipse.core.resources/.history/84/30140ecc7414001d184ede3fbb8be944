@@ -1,0 +1,91 @@
+package RaceCondition;
+
+public class Mian {
+	
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		
+		Common   common = new Common();
+		
+		CThread cThread = new CThread(common, "one");
+		CThread cThread1 = new CThread(common, "Two");
+		
+		cThread.setPriority(Thread.MIN_PRIORITY);
+		cThread.start();
+		cThread.join();
+		
+		cThread1.setPriority(Thread.MAX_PRIORITY);
+		cThread1.start();
+		cThread1.join();
+
+
+		
+		
+	}
+	
+
+
+}
+
+
+class Common {
+	
+	public void fun1(String name) {
+		System.out.println("Welcome ");
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(name);
+	}
+	
+	
+}
+
+
+class CThread extends Thread{
+	Common c ;
+	String name;
+	
+	
+	public CThread(Common c, String name) {
+		this.c = c;
+		this.name = name;
+	}
+	
+
+	
+	
+	
+	@Override 
+	public void run() {
+		c.fun1(name);
+	}
+	
+	
+}
+
+
+
+class CThread1 extends Thread{
+	Common c ;
+	String name;
+	
+	public CThread1(Common c, String name) {
+		this.c = c;
+		this.name = name;
+	}
+
+	
+	@Override 
+	public void run() {
+		c.fun1(name);
+	}
+	
+	
+}
+

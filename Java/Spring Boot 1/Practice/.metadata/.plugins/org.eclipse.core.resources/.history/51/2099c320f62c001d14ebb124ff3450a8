@@ -1,0 +1,33 @@
+package Question3;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Demo {
+	
+	void doTransactions(List<? extends Payment> es) {
+		
+		if(es instanceof CashPayment) {
+			System.out.println(es);
+		}
+		else {
+			
+		}
+	}
+
+	
+	public static void main(String[] args) {
+		
+		Demo demo = new Demo();
+		List<? extends CashPayment> list1 = new ArrayList<>();
+		list1.add(8000, null);
+		list1.add(7000, null);
+
+		
+		demo.doTransactions(list1);
+		
+		
+		
+	}
+}

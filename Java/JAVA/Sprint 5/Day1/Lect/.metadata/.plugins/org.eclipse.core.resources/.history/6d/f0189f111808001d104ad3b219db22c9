@@ -1,0 +1,10 @@
+
+public class InvalidAgeException extends Exception{
+
+	
+	public InvalidAgeException message(String message) {
+		super(message);
+	}
+
+	
+}

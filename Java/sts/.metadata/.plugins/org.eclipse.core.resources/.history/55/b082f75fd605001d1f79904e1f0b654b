@@ -1,0 +1,52 @@
+package ExceptionHandling;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		System.out.println("Start of main");
+		
+		try {
+		
+			int x = 100;
+			String y = "11"
+					+ "";
+			
+			int z = x/Integer.parseInt(y);
+		
+			System.out.println("x/y is : "+ z);
+			System.out.println("end of try");
+			
+			A a = null;
+			
+			if(z==10) {
+				a = new A(); 
+				a.message();
+				
+			}else {
+				a.message();
+				
+			}
+			
+		}
+		
+		catch(ArithmeticException ae) {
+			System.out.println("inside Catch ");
+			System.out.println(ae.getMessage());;
+		}catch(NumberFormatException nfe) {
+			System.out.println("Inside Number format Exception");
+		}catch(NullPointerException npe) {
+			System.out.println("Inside nullpointer exception");
+		}
+		
+		
+		
+		
+		
+		
+		
+		System.out.println("End of main.....");
+
+	}
+
+}

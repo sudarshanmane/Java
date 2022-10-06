@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.List;
+
+public class PlayList {
+	
+	
+		
+		public List<Song> songs = new ArrayList<>();
+		
+	 public void addSong(Song song) {
+		 
+		 if(songs.size()==0) {
+			 songs.add(song);
+			 System.out.println("Song added to the playlist successfully.");
+			 
+		 }else if(songs.size()==1 && songs.get(0).equals(song) && songs.get(0).hashCode() == song.hashCode() ) {
+			 System.out.println("Song is already added in the playlist");
+		 }else if(songs.size()==2 && songs.get(0).equals(song) && songs.get(0).hashCode() == song.hashCode() &&
+				 songs.get(1).equals(song) && songs.get(1).hashCode() == song.hashCode()) {
+			 System.out.println("Song is already added in the playlist");
+		 }else if(songs.size()==2 && songs.get(0).equals(song) && songs.get(0).hashCode() == song.hashCode() &&
+				 songs.get(1).equals(song) && songs.get(1).hashCode() == song.hashCode()&& 
+				 songs.get(2).equals(song) && songs.get(2).hashCode() == song.hashCode()) {
+			 System.out.println("Song is already added in the playlist");
+		 }else if(songs.size()==3 && songs.get(0).equals(song) && songs.get(0).hashCode() == song.hashCode() &&
+				 songs.get(1).equals(song) && songs.get(1).hashCode() == song.hashCode()&& 
+				 songs.get(2).equals(song) && songs.get(2).hashCode() == song.hashCode() && 
+				 songs.get(3).equals(song) && songs.get(3).hashCode() == song.hashCode()) {
+			 System.out.println("Song is already added in the playlist");
+		 }else {
+			 songs.add(song);
+			 System.out.println("Song added to the playlist successfully.");
+		 }
+		 
+		 
+		 
+		 
+		 
+	 
+
+		 }
+	 
+	 
+	 
+
+	
+	
+		 
+	
+
+}

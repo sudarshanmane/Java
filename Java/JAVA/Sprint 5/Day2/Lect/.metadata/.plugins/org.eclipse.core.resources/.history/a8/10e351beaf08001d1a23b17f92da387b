@@ -1,0 +1,39 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.Scanner;
+
+public class EmployeeBonus {
+	
+	public double getBonus(String joningDate) {
+		
+		double bonus ;
+		
+		
+		return 0;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Your Joining Date in dd/MM/yyyy format");
+		String joinungDate = sc.next();
+
+		
+		try {
+			
+			LocalDate joining = LocalDate.parse(joinungDate,DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+			LocalDate ld = LocalDate.now();
+			
+			System.out.println(ChronoUnit.YEARS.between(joining, ld));
+		
+		}catch(Exception e) {
+			System.out.println("error");
+		}
+	}
+
+	
+
+}

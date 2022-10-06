@@ -1,0 +1,41 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class MyGenerics {
+	
+	public static void main(String[] args) {
+		
+		MyOwnGenerics<String> t = new MyOwnGenerics<>();
+		t.add("one");
+		t.add("two");
+		System.out.println(t);
+		
+	}
+	
+	
+	
+
+}
+
+
+class MyOwnGenerics<T> {
+	
+	T obj;
+	void add(T object) {
+	
+		obj = object;
+	}
+
+	T get() { 
+		return this.obj;
+		
+	}
+	
+	@Override
+	public String toString() {
+		return "MyOwnGenerics [obj=" + obj + "]";
+	}
+	
+	
+	
+}

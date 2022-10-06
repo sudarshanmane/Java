@@ -1,0 +1,36 @@
+package Question1;
+
+public class PrintProductUsingThreds {
+	
+	static int product =1;
+	
+	public static void main(String[] args) {
+		
+		
+		
+		Thread firstThread = new Thread(() -> 
+		
+		{System.out.println("Finding product");
+		
+		for(int a = 1;a<=10;a++) {
+	     product *= product*a; 	
+	     
+        }
+		Thread.currentThread().setPriority( Thread.MAX_PRIORITY);
+
+        });
+		
+		
+		
+		Thread SecondThread = new Thread(() -> 
+		
+		{System.out.println("Product of 1 to 10 is : " + product);
+		
+		
+		Thread.currentThread().setPriority( Thread.MIN_PRIORITY);
+
+        });
+		
+	}
+
+}

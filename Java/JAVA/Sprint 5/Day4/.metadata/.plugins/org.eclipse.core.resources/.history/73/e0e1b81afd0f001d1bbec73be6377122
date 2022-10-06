@@ -1,0 +1,25 @@
+package Question6;
+
+public class ReruningLambda {
+
+	public static void main(String[] args) {
+		
+		getOuput(). calculate(10, 20, 30);
+		System.out.println("one");
+		
+	}
+	
+	public static Calculator getOuput() {
+		return (a, b, c) -> System.out.println(a+b+c);	
+	}
+
+	
+}
+
+
+
+interface Calculator{
+	void calculate(int a,int b,int c);
+	
+}
+

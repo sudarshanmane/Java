@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		Map<String, Integer> nameToRating = new HashMap<>();
+		
+		nameToRating.put("TopGun", 10);
+		nameToRating.put("TopGun", 10);
+		nameToRating.put("TopGun", 9);
+		nameToRating.put("TopGun", 9);
+		
+//		nameToRating.remove("TopGun");
+		
+		nameToRating.put("RRR",10);
+		
+		System.out.println(nameToRating.get("RRR"));
+		System.out.println(nameToRating);
+		
+		
+		
+
+		
+		
+		
+		
+	}
+
+}

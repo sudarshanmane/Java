@@ -1,0 +1,47 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.Scanner;
+
+public class Eligibility {
+
+	public static void main(String[] args) {
+		
+
+		Scanner sc = new Scanner(System.in);
+		try {
+	
+			int age = 0;
+			
+		System.out.println("Enter your birth date in dd-MM-yyyy format,");
+		String dob = sc.next();
+		
+	
+       LocalDate ld = LocalDate.parse(dob,DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+			LocalDate lt = LocalDate.now();	
+			
+			if(ChronoUnit.DAYS.between(ld, lt) < 0 ){   
+	        	System.out.println("“Date should not be in Future”.");
+
+	        }else {
+	        	age = (int) ChronoUnit.YEARS.between(ld,lt);
+	        	
+	        	}
+			
+			System.out.println(age);
+			
+			
+			
+		}catch(Exception ide) {		
+			System.out.println("Enter your date in dd-MM-yyyy format,");
+		}
+		
+
+		
+	}
+		
+		
+
+	
+
+}

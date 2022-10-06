@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.List;
+
+public class PlayList {
+	
+	
+		
+		public List<Song> songs = new ArrayList<>();
+		
+	 public void addSong(Song song) {
+		 
+		 LinkedHashSet<Song> sg = new LinkedHashSet<>();
+		 sg.add(song);
+		 
+		 if(songs.size()==0) {
+			 songs.add(song);
+		 }
+//		 else {
+//			 
+//		 }
+		 		
+		
+		 
+	 }
+	 
+	 void callPlay() {
+		 
+		 for(Song song1 : songs) {
+			 
+			 String sName = song1.getSongName();
+			 String mName = song1.getMovieName();
+			 Song sm = new Song(sName,mName);
+			 sm.play();
+			 
+		 }
+	 }
+	 
+	 
+
+	
+	
+		 
+	
+
+}

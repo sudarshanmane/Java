@@ -1,0 +1,20 @@
+
+public class Demo {
+	
+	
+	public static void printResult(Items items){
+		System.out.println(items);
+		
+		items.message(items);
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Items items = Items.BEARDO;
+		printResult(items);
+		
+	}
+
+}

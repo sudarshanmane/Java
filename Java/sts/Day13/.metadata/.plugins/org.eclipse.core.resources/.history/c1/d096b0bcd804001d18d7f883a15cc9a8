@@ -1,0 +1,12 @@
+package cHECKeNUMneW;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		City city = City.CHENNAI;
+		city.message(city);
+
+	}
+
+}

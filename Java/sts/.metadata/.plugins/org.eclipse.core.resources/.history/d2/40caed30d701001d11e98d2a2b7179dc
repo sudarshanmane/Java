@@ -1,0 +1,32 @@
+package Question3;
+
+public class Main {
+	
+	void messageToStudents(Evaluation evaluation) {
+		
+		if(evaluation instanceof DsaEvaluation) {
+			System.out.println("“Its a DSA Evaluation");
+			
+			DsaEvaluation obj = (DsaEvaluation) evaluation;
+			obj.evaluationTiming();
+		}else {
+			System.out.println("“Its a DSA Evaluation");
+			
+			CodingEvaluation obj = (CodingEvaluation) evaluation;
+			obj.evaluationTiming();
+		}
+		
+	}
+
+
+	public static void main(String[] args) {
+		
+		Main  main = new Main();
+		main.messageToStudents(new DsaEvaluation(5));
+		main.messageToStudents(new CodingEvaluation(5));
+
+		
+
+	}
+
+}

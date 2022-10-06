@@ -1,0 +1,39 @@
+package Question3;
+
+import java.util.ArrayList;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		
+ArrayList<Books> booksCollection =  new ArrayList<>();
+		
+		booksCollection.add(new Books(1,"'a","A3"));
+		booksCollection.add(new Books(2,"a","A1"));
+		booksCollection.add(new Books(3,"c","A1"));
+		booksCollection.add(new Books(1,"a","A4"));
+		
+		
+		
+		Library pl = new Library();
+		
+		for(Books bk : booksCollection) {
+			
+			
+		    pl.addBooks(bk);
+		    
+		}
+		
+        for(Books bks : pl.books) {	
+        	
+        	System.out.println("Book { bookId = "+ bks.getBookId() + " bookName = "  +bks.getBookName() + " author = "+ bks.getAuthor() + "}" );
+
+        }
+        }
+ 		
+		
+		
+	
+
+}

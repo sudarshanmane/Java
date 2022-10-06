@@ -1,0 +1,39 @@
+
+public class Account {
+	
+	String accountNumber;
+	double balance;
+
+
+	public Account(String accNum) {
+	this.accountNumber = accNum;
+	}
+	
+	
+	void deposit(int amount){
+		
+		this.balance=  this.balance + amount;
+		
+	    System.out.println("Total amount deposited in  account is : "+ this.balance);	
+	}
+	
+	double withdraw(int amount) throws InsufficientFundsException {
+		
+		
+		
+		if(this.balance - amount>=0) {
+			this.balance = this.balance - amount;
+		}
+		else {
+			InsufficientFundsException isfe = new InsufficientFundsException("Insufficient balance in your account");
+			throw isfe;
+		}
+		
+		return this.balance;
+
+		
+	}
+	
+	
+
+}

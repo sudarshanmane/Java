@@ -1,0 +1,22 @@
+package _2LamdaInterface;
+
+public class _2Lamda {
+	
+	public static void main(String[] args) {
+	
+		MyInterface interface1 = ((a, b) -> System.out.println(a+b));
+		
+		
+	}
+
+}
+
+@FunctionalInterface
+
+interface MyInterface {
+	
+	abstract void add(int a,int b);
+	
+};
+
+

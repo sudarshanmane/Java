@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Employee {
+
+	public int calculateAverage(int[] age){
+		
+		int  avaAge =  0 ;
+				
+		return 0;
+		
+		
+	}
+	public static void main(String[] args) {
+		Employee employee = new Employee();
+		
+		Scanner input  = new Scanner(System.in); 
+		
+		System.out.println("Enter total no.of employees : ");
+		int totalNoOfEmployees = input.nextInt();
+		
+		int[] age = new int[totalNoOfEmployees];
+		
+		for(int a = 0;a<totalNoOfEmployees;a++) {
+			int ages = input.nextInt();
+			
+			age[a] = ages;
+			
+			
+		}
+		
+		System.out.println(age);
+		
+		
+		employee.calculateAverage(age);  
+		
+		
+
+	}
+
+}

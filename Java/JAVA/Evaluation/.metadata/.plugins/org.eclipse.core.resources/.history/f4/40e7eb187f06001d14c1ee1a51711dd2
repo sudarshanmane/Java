@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Demo {
+	
+
+
+	void showDetails(Month m){
+		
+		if(m == Month.JAN) {
+			System.out.println("This is the 1st Month of the Year January");
+		}else if(m==Month.FEB) {
+			System.out.println("This is the 2st Month of the Year February");
+		}else if(m==Month.MAR) {
+			System.out.println("This is the 3st Month of the Year March");
+		}else if(m==Month.APR) {
+			System.out.println("This is the 4st Month of the Year April");
+		}else if(m==Month.MAY) {
+			System.out.println("This is the 5st Month of the Year May"
+					+ "");
+		}else if(m==Month.FEB) {
+			System.out.println("JAN then print “This is the 1st Month of the Year January");
+		}else if(m==Month.FEB) {
+			System.out.println("JAN then print “This is the 1st Month of the Year January");
+		}else if(m==Month.FEB) {
+			System.out.println("JAN then print “This is the 1st Month of the Year January");
+		}else if(m==Month.FEB) {
+			System.out.println("JAN then print “This is the 1st Month of the Year January");
+		}else if(m==Month.FEB) {
+			System.out.println("JAN then print “This is the 1st Month of the Year January");
+		}else if(m==Month.FEB) {
+			System.out.println("JAN then print “This is the 1st Month of the Year January");
+		}else if(m==Month.FEB) {
+			System.out.println("JAN then print “This is the 1st Month of the Year January");
+		}
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+	
+		System.out.println("Enter the Month");
+		String month = input.nextLine().toUpperCase();
+		try {
+			
+			Month month1 = Month.valueOf(month);
+			Demo d = new Demo();
+			d.showDetails(month1);
+
+		}catch(IllegalArgumentException i) {
+			System.out.println("Invalid Month Name");
+			
+		}
+		
+
+		
+		
+		
+
+		
+	}
+
+
+}

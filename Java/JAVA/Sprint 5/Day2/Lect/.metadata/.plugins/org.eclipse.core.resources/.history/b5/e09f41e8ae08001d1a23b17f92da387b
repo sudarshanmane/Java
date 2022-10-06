@@ -1,0 +1,36 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+public class EmployeeBonus {
+	
+	public double getBonus(String joningDate) {
+		
+		double bonus ;
+		
+		
+		return 0;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Your Joining Date in dd/MM/yyyy format");
+		String joinungDate = sc.next();
+
+		
+		try {
+			
+			LocalDate ld = LocalDate.parse(joinungDate,DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+			System.out.println(ld);
+		
+		}catch(Exception e) {
+			System.out.println("error");
+		}
+	}
+
+	
+
+}

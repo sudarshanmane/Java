@@ -1,0 +1,42 @@
+package PassingLambda;
+
+public class ReturnLambda {
+
+	public static void main(String[] args) {
+		
+
+		
+		returningLambda().sayHellow("one");
+		returnMy1().sayBye("Mani");
+
+
+	}
+	
+	public static MyInterface1 returnMy1() {
+		
+		return name -> System.out.println("Bye " + name);
+		
+	}
+	
+	
+	public static MyInterface returningLambda() {
+		
+		MyInterface lambda = name -> System.out.println("Hello " + name);
+		
+		return lambda;
+	}
+
+}
+
+interface MyInterface {
+	
+	abstract void sayHellow(String name);
+	
+}
+
+interface MyInterface1{
+	
+	abstract void sayBye(String name);
+	
+	
+}

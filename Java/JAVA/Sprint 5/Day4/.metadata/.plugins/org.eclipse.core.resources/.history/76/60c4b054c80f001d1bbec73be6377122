@@ -1,0 +1,31 @@
+package Question1;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.stream.Collectors;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		List<Students> list = Arrays.asList(
+				new Students(1, "Ganesh", 200),
+				new Students(5, "Akash", 300),
+				new Students(4, "Tarun", 400),
+				new Students(6, "Rajesh", 500),
+				new Students(2, "Mangesh", 600)
+				);
+		
+		Set<Students> set = new TreeSet<>(new StudentsRoll());
+		
+		for(Students st : list) {
+			set.add(st);
+		}
+		
+		List<Students> list2 = set.stream().filter( sts -> sts.marks>250).collect(Collectors.toList());
+		list2.forEach(students -> System.out.println(students));
+
+	}
+
+}

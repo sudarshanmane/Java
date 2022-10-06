@@ -1,0 +1,25 @@
+package Question4;
+
+public class Test  implements Intr{
+
+	@Override
+	public int[] display(int p) {
+		int n = 1;
+		
+		int[] array = new int[n];
+		
+		for(int a = 1;a<=p ;a++) {
+			
+			if(p%a == 0) {
+				array
+				[0] = a;
+				n++;
+			}
+		}
+		
+		return arr;
+	}
+
+
+
+}

@@ -1,0 +1,88 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Mobile {
+	
+	HashMap<String,ArrayList<String>> mobiles = new HashMap<>();
+	
+	public String addMobile(String company, String model) {
+		
+		ArrayList<String> arrayList = new  ArrayList<>();
+		arrayList.add(model);
+
+		int tc = 0;
+
+		Set<Map.Entry<String, ArrayList<String>>> entries = mobiles.entrySet();	
+		
+		for(Map.Entry<String, ArrayList<String>> entry : entries) {
+			
+			if(entry.getKey().equals(company)){
+				tc++;
+				
+				entry.getValue().add(model);				
+			}
+		}
+		
+		if(tc==0) {
+			
+			mobiles.put(company, arrayList);
+			
+
+		}
+		return "Mobile added successfully";
+		
+	}
+	
+	public List<String> getModels(String company)throws InvalidMobileException{
+		
+		Set<Map.Entry<String, ArrayList<String>>> entries = mobiles.entrySet();	
+		
+		
+		int count = 0;
+		for(Map.Entry<String, ArrayList<String>> entry : entries) {
+			
+			if(entry.getKey().equals(company)){
+				count++;
+				return entry.getValue();
+			}
+	}
+		
+		if(count == 0) {
+			InvalidMobileException exception = new InvalidMobileException("Error");
+			throw exception;
+		}
+		
+		return null;
+			
+
+}
+	
+	
+	public static void main(String[] args){
+		
+		Mobile mobile= new  Mobile();
+		
+		
+		
+		System.out.println(mobile.addMobile("one","O"));
+		System.out.println(mobile.addMobile("one","O"));
+		System.out.println(mobile.addMobile("Two","T"));
+
+		
+		try {
+			
+			System.out.println(mobile.getModels("Two"));			
+			
+		} catch (InvalidMobileException e) {
+			
+			System.out.println("Error");
+			
+		}
+		
+		
+		
+	}
+}

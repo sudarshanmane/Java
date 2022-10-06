@@ -1,0 +1,22 @@
+package Question4;
+
+import java.util.Scanner;
+
+class Main{
+    	
+    	
+    	public static void main(String[] args) {
+    		
+    		Test test =  new  Test();
+    		
+    	 
+    		Scanner input  = new Scanner(System.in);
+    		
+    		
+    		System.out.println("Enter the number");
+    		int providedNumber = input.nextInt();
+    		
+    		test.display(providedNumber);
+    	
+}
+}

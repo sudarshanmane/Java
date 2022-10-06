@@ -1,0 +1,26 @@
+package Question1;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		Map<Employee, Integer> map =  new  TreeMap<>();
+		map.put(new Employee(1, "one", "one"), 10000);
+		map.put(new Employee(1, "ane", "ane"), 10000);
+		
+		System.out.println(map);
+
+		
+		
+		
+		
+		
+
+	}
+
+}

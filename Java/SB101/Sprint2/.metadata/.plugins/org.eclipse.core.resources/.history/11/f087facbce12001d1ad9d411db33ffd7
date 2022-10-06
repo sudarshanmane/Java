@@ -1,0 +1,12 @@
+package CreatngThread;
+
+public class Day4MultiAssiginents {
+	public static void main(String[] args) {
+		
+		
+		Thread  thread = new Thread();
+	}
+	
+	
+
+}

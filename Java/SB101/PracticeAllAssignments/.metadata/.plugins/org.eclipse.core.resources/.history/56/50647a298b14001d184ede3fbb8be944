@@ -1,0 +1,80 @@
+package RaceObjectLevelConditionPrictice;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Common common = new  Common();
+		
+		CT1 ct1= new CT1(common, "one");
+		CT2 ct2 = new CT2(common, "two");
+		
+		ct1.start();
+		ct2.start();
+
+		
+		
+		
+	}
+
+
+}
+
+
+class Common {
+	
+      public synchronized void fun(String name) {
+    	  
+    	  System.out.println("Welcone");
+    	  
+    	  try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+    	  
+    	  System.out.println(name);
+    	  
+    	  
+      }
+	
+	
+}
+
+
+class CT1 extends Thread{
+	
+	Common common;
+	String name;
+	public CT1(Common c,String name) {
+		this.common =c;
+		this.name = name;
+	}
+	
+	@Override
+	public void run() {
+		
+		common.fun(name);
+		
+	}
+	
+}
+
+
+
+class CT2 extends Thread{
+	
+	Common common;
+	String name;
+	public CT2(Common c,String name) {
+		this.common =c;
+		this.name = name;
+	}
+	
+	@Override
+	public void run() {
+		
+		common.fun(name);
+		
+	}
+	
+}

@@ -1,0 +1,20 @@
+import java.util.HashSet;
+
+public class Library {
+	
+	
+	
+	
+
+	HashSet<Book> s1 = new HashSet<>();
+	
+	public void addSong(Book book){
+		s1.add(book);
+	}
+
+
+
+
+
+
+}

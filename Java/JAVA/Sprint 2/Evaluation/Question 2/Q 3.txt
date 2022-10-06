@@ -1,0 +1,17 @@
+Difference Between Overloading and Overriding;
+
+1) Overriding :
+
+  1) arguments should be different 
+  2) Methods has to be different
+  3) can be performed in one class;
+  4) Performance less
+
+
+1) Overriding :
+
+  1) arguments should be Same
+  2) Methods has to be same;
+  3) can be performed in two or more  class;
+  4) Performance more 
+

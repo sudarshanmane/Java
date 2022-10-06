@@ -1,0 +1,24 @@
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		HashMap<Integer, String> hm  = new HashMap<>();
+		hm.put(1,"one");
+		hm.put(2,"two");
+		hm.put(3,"three");
+		System.out.println(hm);
+		
+		Set<Integer> s = hm.keySet();
+		System.out.println(s);
+		
+		Set<Entry<Integer, String>> ss = hm.entrySet();
+		System.out.println(ss);
+
+
+	}
+
+}

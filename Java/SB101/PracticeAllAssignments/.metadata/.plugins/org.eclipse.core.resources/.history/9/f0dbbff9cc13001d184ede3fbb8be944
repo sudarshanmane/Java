@@ -1,0 +1,27 @@
+
+public class Print1tpo10 {
+	
+	public static void main(String[] args) {
+
+		Thread thread = new Thread(new  Runnable1());
+		thread.start();
+	}
+
+}
+
+class Runnable1 implements  Runnable {
+
+	@Override
+	public void run() {
+		
+	    for(int a = 1; a<=10;a++) {
+	    	
+	    	System.out.println(a);
+	    	
+	    	
+	    }
+		
+	}
+	
+	
+}

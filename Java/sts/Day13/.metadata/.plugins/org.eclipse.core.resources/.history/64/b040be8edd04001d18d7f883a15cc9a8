@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Demo {
+	
+	static void printDetails(Items items) {
+		
+		Items[] items2 = Items.values();
+		
+		int check = 0;
+		
+		for(Items items1 : items2) {
+			
+			if(items != items1) {
+				check =1;
+			}
+			
+		}
+		System.out.println(check);
+		
+//		items.message(items);
+		
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("EnterItem Name");
+		String item = input.next();
+		
+		Items items = Items.valueOf(item.toUpperCase());
+		printDetails(items);
+		
+	    
+		
+		
+
+	}
+
+}

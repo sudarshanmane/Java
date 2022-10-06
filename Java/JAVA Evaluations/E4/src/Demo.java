@@ -1,0 +1,63 @@
+
+public class Demo {
+	
+	public static Bank getBank(String bank) {
+		
+		if(bank.equals("axis")) {
+			
+			Bank bank1 = new AxisBank();
+			bank1.branchName = "Pune";
+			bank1.ifscCode = "AXIS0005943";
+			
+			AxisBank axisBank = (AxisBank) bank1;
+			
+			axisBank.rateOfInterest = 11.25;
+			
+			return bank1;
+			
+		}
+		else if(bank.equals("icic")) {
+			
+			Bank bank2 = new ICICIBank();
+			bank2.branchName = "icic";
+			bank2.ifscCode = "2222218500";
+			
+
+			ICICIBank axisBank = (ICICIBank) bank2;
+			axisBank.rateOfInterest = 20.00;
+
+			return bank2;
+			
+		}else {
+			
+			return null;
+			
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Bank bank = getBank("icic");
+		
+		if(bank instanceof AxisBank){
+			
+			bank.displayDetails();
+			AxisBank axisBank = (AxisBank) bank;
+			axisBank.getCreditCard();
+		
+		}
+		else if(bank instanceof ICICIBank){
+			
+			bank.displayDetails();
+			
+		
+		}else {
+			System.out.println("error");
+		}
+		
+		
+		
+	}
+
+}

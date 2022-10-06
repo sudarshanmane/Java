@@ -1,0 +1,18 @@
+package com.masai;
+import com.ratan.A;
+
+public class Demo extends A {
+	
+	public static void main(String[] args) {
+		
+//		A a1 = new A();
+//		a1.funA();
+		
+		Demo demo = new Demo();
+		System.out.println(demo.i);
+		
+	}
+	
+	
+
+}

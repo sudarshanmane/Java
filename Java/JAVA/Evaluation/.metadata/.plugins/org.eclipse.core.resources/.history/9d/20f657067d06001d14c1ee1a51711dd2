@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Demo {
+	
+	void showDetails(Month m){
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+	
+		System.out.println("Enter the Month");
+		String month = input.nextLine().toUpperCase();
+
+		Month month1 = Month.valueOf(month);
+		
+
+		
+		
+		
+
+		
+	}
+
+
+}

@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Paragraph {
+	
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter Para");
+	
+		 String para = "Java nfjkn jkdnfjkvn ndkjfsdnv kjdnfvjksdfv ndfkvnvjfkd dlkfnvdfsv  dfmvnfdskbnb dfmkn kmnfjsdf kjdfvnfd kjdfnvkjfdsvn dfkjvn dfksjvndfsv  vkjdfnv"
+		 		+ "dfs vdfk jjvnfsdv fjkvn  fkdjvn Java kmsnvjnf nkjhf hfbherrbf herbfhuebf eurbhuerwb erihfnuerwb euibnuewrbe iewrfnriuewne iufunewrfjne ienfiuewrunweif eirniwerbewriub weriubniewrunewri einfweijvnewr ewribierbvwern Java";
+		 
+		 Pattern p = Pattern.compile("Java");
+		 Matcher m =  p.matcher(para);
+		 
+		 while(m.find()) {
+			 
+			 System.out.println(m.start() + "----" + m.end() + "----" + m.group());
+		 }
+		
+		
+		
+	}
+
+}

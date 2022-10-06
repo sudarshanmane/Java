@@ -1,0 +1,60 @@
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.List;
+
+public class PlayList {
+	
+	
+		
+		public List<Song> songs = new ArrayList<>();
+		
+	 public void addSong(Song song) {
+		 
+		 
+		LinkedHashSet<Song> s = new LinkedHashSet<>();
+		LinkedHashSet<Song> s1 = new LinkedHashSet<>();
+		
+	
+	
+		
+		if(s.size() == 0 &&s1.size()==0) {
+			s.add(song);
+			s1.add(song);
+			 System.out.println("Song added to the playlist successfully.11");
+
+		}else {
+			s.add(song);
+			if(s.size()>s1.size()) {
+				 s1.add(song);
+				 System.out.println(s);
+				 System.out.println(s1);
+//				 System.out.println("Song added to the playlist successfully.");
+
+			}
+//			else {
+//				System.out.println("Song is already added in the playlist");
+//			}
+		
+		
+		
+		
+		}
+		
+	
+		 
+		 
+		 
+		 
+	 
+
+		 }
+	 
+	 
+	 
+
+	
+	
+		 
+	
+
+}

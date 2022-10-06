@@ -1,0 +1,24 @@
+
+public class IPL {
+
+	void homeTeamStadium(Stadium stadium){
+		if(stadium == Stadium.CHIDAMBARAM_STADIUM){
+			System.out.println("ues");
+		}
+			
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Stadium stadium = Stadium.CHIDAMBARAM_STADIUM;
+		
+		IPL ipl = new IPL();
+		ipl.homeTeamStadium(stadium);
+		
+		
+		
+	}
+}

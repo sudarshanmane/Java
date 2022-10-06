@@ -1,0 +1,34 @@
+package StreamDemo;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Matchinh {
+	
+	public static void main(String[] args) {
+		
+		List<Student> st =  Arrays.asList(new  Student(101, "a", 92)
+				, new Student( 105, "s", 99), new Student( 102, "v", 95));
+		
+		
+		boolean allch = st.stream().allMatch(student -> student.getMarks()>50);
+		System.out.println(allch);
+	    
+		
+		
+		boolean anych1 = st.stream().anyMatch(student -> student.getMarks()>50);
+		System.out.println(anych1);
+		
+		boolean nonech1 = st.stream().noneMatch(student -> student.getMarks()>5200);
+		System.out.println(nonech1);
+	    
+	    
+		
+		
+		
+		
+	}
+	
+
+}

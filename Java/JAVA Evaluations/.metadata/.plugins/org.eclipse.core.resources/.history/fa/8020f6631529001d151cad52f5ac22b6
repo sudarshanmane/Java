@@ -1,0 +1,22 @@
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Loan  loan = new Loan();
+
+		double pLoan = loan.calculateLoanAmount(new PermanentEmployee(1 , "One", 1000));
+		double tLoan = loan.calculateLoanAmount(new PermanentEmployee(2 , "Two", 2000));
+		
+		System.out.println(pLoan);
+		System.out.println(tLoan);
+
+		
+		
+		
+		
+		
+		
+	}
+
+}

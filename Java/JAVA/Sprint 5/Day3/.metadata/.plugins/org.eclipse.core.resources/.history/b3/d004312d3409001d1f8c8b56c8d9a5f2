@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner sc = new Scanner(System.in);
+		 
+		ArrayList<Song> arrSong = new ArrayList<>();		
+		 
+		for(int a = 0;a<4;a++){	
+		System.out.println("enter Song name");
+		String sName = sc.nextLine();
+		
+		System.out.println("enter movie name");
+		String mName = sc.nextLine();
+		
+		Song s = new Song(sName, mName);
+		arrSong.add(s);	
+	}
+		
+		PlayList pl = new PlayList();
+		
+		for(Song s : arrSong ){
+			pl.addSong(s);
+		}
+		
+		System.out.println("------------ play method of song ------------ ");
+		
+//		pl.callPlay();
+		
+		
+		
+
+	}
+}

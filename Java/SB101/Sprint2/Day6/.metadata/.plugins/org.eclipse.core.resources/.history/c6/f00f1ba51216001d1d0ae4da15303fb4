@@ -1,0 +1,50 @@
+package Question2;
+
+public class ThreadPool {
+	
+    public static void main(String[] args) {
+		
+    	Common common= new Common();
+    	
+    	Common.common1 = new Common("One");
+	}
+
+}
+
+class Common implements Runnable{
+	
+	String name ;
+	Common common ;
+	static Common common1 = new Common(name);
+	
+	
+	public Common(Common common,String name) {	
+		
+		this.name = name;
+		this.common =common;
+		
+	}
+	public Common(String name1) {	
+		
+		this.name= name1;
+		
+	}
+
+	public Common() {
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public void run() {
+		
+		synchronized (common) {
+			
+			System.out.println(name);
+			
+		}
+		
+
+		
+	}
+	
+	
+}

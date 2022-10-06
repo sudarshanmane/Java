@@ -1,0 +1,19 @@
+package firdt;
+
+public class Demo {
+
+	
+	public  X funDemo(X x){
+		System.out.println("inside funDemo of Demo");
+		
+		return new Ximpl();
+	}
+	
+	public static void // @formatter:off
+
+	
+// @formatter:on
+ {
+		
+	}
+}

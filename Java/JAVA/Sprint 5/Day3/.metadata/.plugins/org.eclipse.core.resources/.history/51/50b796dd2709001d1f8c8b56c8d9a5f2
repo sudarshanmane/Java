@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner sc = new Scanner(System.in);
+		 
+		Song[] objArray = new Song[4];		
+		
+		for(int a = 0;a<4;a++){	
+		System.out.println("enter Song name");
+		String sName = sc.nextLine();
+		
+		
+		
+		System.out.println("enter movie name");
+		String mName = sc.nextLine();
+
+		objArray[a]=new Song(sName,mName);
+	}
+		
+		PlayList pl = new PlayList();
+		
+		for(Song s : objArray ){
+			pl.addSong(s);
+		}		
+		
+
+	}
+}

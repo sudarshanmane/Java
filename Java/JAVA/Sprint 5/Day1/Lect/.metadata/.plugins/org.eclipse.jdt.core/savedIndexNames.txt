@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\Users\Admin\Desktop\Java\Sprint 5\Day1\Lect\.metadata\.plugins\org.eclipse.jdt.core
+911535316.index
+2942156142.index
+1865797976.index
+3629813240.index
+2680077694.index

@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		int roll = 100;
+		String name= "Sudarshan";
+		int marks = 10;
+		
+		Student student1 = new Student(roll,name,marks);
+		student1.displayDetails();
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

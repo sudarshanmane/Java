@@ -1,0 +1,109 @@
+package Questi;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Mobile {
+	
+	HashMap<String,ArrayList<String>> mobiles = new HashMap<>();
+	
+	Set<Map.Entry<String, ArrayList<String>>> entry = mobiles.entrySet();
+	
+	public String addMobile(String company, String model) {
+		
+		int count = 0;
+	if(count == 0) {for(Map.Entry<String, ArrayList<String>> entry1  : entry) {
+		
+		if(entry1.getKey().equals(company)) {
+			
+			entry1.getValue().add(model);
+			count++;
+		}
+		
+	}
+	
+	}else {
+		
+		List<String> list = new ArrayList<>();
+		
+		list.add(model);
+		
+		mobiles.put(company, (ArrayList<String>) list);
+		
+		System.out.println(mobiles);
+	}
+	
+	return  "Mobile added successfully" ;
+		
+		
+	}
+	
+	
+	public List<String> getModels(String company)throws InvalidMobileException{
+		
+		for(Map.Entry<String, ArrayList<String>> entry1  : entry) {
+			
+			System.out.println(entry1.getKey());
+			
+			if(entry1.getKey().equals(company)) {
+				return entry1.getValue();
+			}else {
+				InvalidMobileException exception =  new InvalidMobileException("Moddel Does not Exist");
+				throw exception;
+				
+			}
+			
+		}
+		return null;
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Mobile mobile  = new Mobile();
+		List<String> name = Arrays.asList("Two");
+		
+		mobile.addMobile( "one" , "three");
+		
+		System.out.println(mobile.addMobile("One", "Two"));
+		
+//		
+//		try {
+//			System.out.println((mobile.getModels("one")));
+//		} catch (InvalidMobileException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+
+
+}
+
+
+	
+	
+	
+	
+	
+
+
+class InvalidMobileException extends Exception{
+
+
+	InvalidMobileException(String message){
+		super(message);
+	}
+	
+};

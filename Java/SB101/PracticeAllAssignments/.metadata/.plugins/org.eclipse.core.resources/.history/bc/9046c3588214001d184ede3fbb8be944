@@ -1,0 +1,89 @@
+package ClassLevelLockSynchro;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Common common = new Common();
+		Common common2 = new Common();
+		
+		ThreadA a = new ThreadA(common, "Ram");
+		ThreadB b = new ThreadB(common2, "Ram");
+		
+		a.start();
+		b.start();
+		
+
+
+		
+		
+		
+		
+		
+
+	}
+
+}
+
+class Common {
+	
+	public static synchronized void fun(String name) {
+		
+		System.out.println("welcome");
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println(name);
+		
+	}
+	
+}
+
+class ThreadA extends Thread{
+	
+	Common common;
+	String name;
+	
+	public ThreadA(Common c ,String name) {
+		
+		this.common = c;
+		this.name =name;
+		
+	}
+	
+	
+	
+	@Override
+	public void run() {
+		common.fun(name);
+		
+	}
+	
+}
+
+
+class ThreadB extends Thread{
+	
+	Common common;
+	String name;
+	
+	public ThreadB(Common c ,String name) {
+		
+		this.common = c;
+		this.name =name;
+		
+	}
+	
+	
+	
+	@Override
+	public void run() {
+		common.fun(name);
+		
+	}
+	
+}
+

@@ -1,0 +1,24 @@
+package PassingLambda;
+
+public class PLambda {
+
+	public static void main(String[] args) {
+
+		System.out.println(getsum(10, 10, (a, b) -> a+b ));
+		
+	}
+	
+	public static int passLambda(int a,int b,passingLambda lambda) {
+		
+		return lambda.getsum(a, b);
+
+	}
+
+}
+
+@FunctionalInterface
+
+interface passingLambda {
+	
+	abstract void getsum(int a ,int b);
+}

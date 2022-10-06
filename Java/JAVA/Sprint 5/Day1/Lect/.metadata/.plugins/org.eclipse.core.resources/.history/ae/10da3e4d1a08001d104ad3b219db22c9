@@ -1,0 +1,9 @@
+
+public class InvalidCountryException extends RuntimeException{
+
+	public InvalidCountryException(String massage) {
+		super(massage);
+	}
+
+	
+}

@@ -1,0 +1,32 @@
+package cHECKeNUMneW;
+
+import java.util.Scanner;
+    
+ public class Demo {
+    	
+	static void printResult(City city) {
+		 
+		 city.message(city);
+		 
+		 
+	    	
+	    }
+	
+	
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		for(int a =0;a<5;a++){	
+		System.out.println("Enter city");
+		
+		String cityName = input.next();
+		
+		City city = City.valueOf(cityName.toUpperCase());
+		printResult(city);
+	}
+
+	}
+
+}

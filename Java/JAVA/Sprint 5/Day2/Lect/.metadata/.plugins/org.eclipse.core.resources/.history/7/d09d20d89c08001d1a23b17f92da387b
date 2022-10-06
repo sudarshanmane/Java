@@ -1,0 +1,134 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+//import java.time.LocalDate;
+//import java.time.LocalDateTime;
+//import java.time.Month;
+//import java.time.format.DateTimeFormatter;
+//
+public class Demo {
+//
+	public static void main(String[] args) {
+//
+////		
+////		LocalDate ld = LocalDate.now();
+////		System.out.println(ld);
+////		
+////		LocalDateTime ldt = LocalDateTime.now();
+////		System.out.println(ldt);
+//////		
+////		LocalDate ldo = LocalDate.of(2021,Month.APRIL,20);
+////		System.out.println(ldo);
+//		
+////		LocalDate date = LocalDate.now();
+////		
+////		LocalDate yest = date.minusDays(1);
+////		
+////		LocalDate tomm = yest.plusDays(2);
+////		System.out.println(yest);
+////		System.out.println(tomm);
+////		
+//		
+////		DateTimeFormatter forObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+////		
+////		LocalDateTime  current = LocalDateTime.now();
+////		System.out.println(current);
+////
+////		
+////		String ufd = current.format(forObj);
+////		System.out.println(ufd);
+////	}
+//		
+//		DateTimeFormatter formaObj = DateTimeFormatter.ofPattern("dd/mm/yyyy");
+//		LocalDate current = LocalDate.now();
+//		
+//		String udf = current.format(formaObj);
+//
+//		System.out.println(current);
+////		
+//		
+//		String dob= "05/02/1999";
+//		
+//		DateTimeFormatter  dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+//		
+//		LocalDate ld = LocalDate.parse(dob,dtf);
+//		
+//		
+////		System.out.println(ld);
+//		
+//		
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("enter dd/mm/yy");
+//		
+//		String dob = sc.next();
+////		
+//		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+//		
+//		
+//		try {
+//		
+//			
+//			LocalDate ld=  LocalDate.parse(dob,dtf);  
+//		
+//			String result = ld.format(DateTimeFormatter.ofPattern("EEEE"));
+//
+//			System.out.println(result);
+//			
+//	
+//		}catch(Exception e) {
+//			System.out.println("one");
+//		
+//		}
+//		
+//		
+		
+		LocalDate ld = LocalDate.now();
+		
+		Scanner sc = new Scanner(System.in);
+		int f = sc.nextInt();
+		int s = sc.nextInt();
+		int l = sc.nextInt();
+		
+		try {
+			LocalDate lf = LocalDate.of(f,s,l);
+			
+			Period p = Period.between(ld, lf);
+			System.out.println(p);
+			
+//			if(p>=18) {
+//			System.out.println("Yes");
+//			}else {
+//				System.out.println("No");
+//			}
+//			
+//			
+		}catch(Exception e) {
+			System.out.println("NO");
+		}
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+}

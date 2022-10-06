@@ -1,0 +1,62 @@
+Q1) Write the difference between JRE, JDK and JVM?
+   1) JRE
+   Java Runtime Environment is a set of tools using which the JVM actually runs.
+   JRE contains deployment technology, including Java Web Start and Java Plug-in.
+    Developers can easily run the source code in JRE, but he/she cannot write and compile the Java program.
+    It includes integration libraries like Java Database Connectivity (JDBC), Remote Method Invocation (RMI), Java Naming and Directory Interface (JNDI), and more.
+    JRE has JVM and Java HotSpot virtual machine client.
+
+    2) JDK
+
+    It enables you to handle multiple extensions in a single catch block.
+    JDK includes all features that JRE has.
+    It contains development tools such as a compiler, debugger, etc.
+    JDK provides the environment to develop and execute Java source code.
+    It can be installed on Windows, Unix, and Mac operating systems.
+    Diamond operator can be used in specifying a generic type interface instead of writing the exact one.
+
+    3) JVM
+    It enables you to run applications in a cloud environment or in your device.
+    Java Virtual Machine converts byte code to the machine-specific code.
+    It provides basic java functions like memory management, security, garbage collection, and more.
+    JVM runs the program by using libraries and files given by Java Runtime Environment.
+    JDK and JRE both contain Java Virtual Machine.
+
+
+
+
+  Q2) Write the difference between JSE, JEE and JME?
+        1) JSE : java standard edition, JSE. It allows the development and deployment of java applications used in desktops, servers, embedded environments and real-time environments. java SE contains classes developed for java web services and provides a foundation for java platform and enterprise edition (JEE).
+
+       2) JEE : java enterprise edition, JEE. Enterprise Edition helps develop and deploy portable, robust, scalable and secure server-side java applications. Java EE is built on the basis of java SE. It provides Web services, component models, management and communication APIs, which can be used To achieve enterprise-level service-oriented architecture (service oriented architecture, SOA) and Web 2.0 applications.
+
+        3) JME : java mirco edition, JME. Provide a robust and flexible environment for applications running on mobile devices and embedded devices (such as mobile phones, PDAs, TV set-top boxes, and printers). Java ME includes a flexible user interface, a robust security model, many built-in network protocols, and rich support for networked and offline applications that can be downloaded dynamically. Applications based on the Java ME specification only need to be written once and can be used for many devices, and can take advantage of the native functions of each device.
+
+Q3) How does java achieve platform independency?
+
+        The meaning of platform-independent is that the java compiled code(byte code) can run on all operating systems.
+        A program is written in a language that is a human-readable language. It may contain words, phrases, etc which the machine does not understand. For the source code to be understood by the machine, it needs to be in a language understood by machines, typically a machine-level language. So, here comes the role of a compiler. The compiler converts the high-level language (human language) into a format understood by the machines. Therefore, a compiler is a program that translates the source code for another program from a programming language into executable code.
+        This executable code may be a sequence of machine instructions that can be executed by the CPU directly, or it may be an intermediate representation that is interpreted by a virtual machine. This intermediate representation in Java is the Java Byte Code.
+
+Q4) What are features of Java and explain them?
+
+        Java is one of the most used programming languages, which allows the development of various types of applications that may run on a single machine. Having celebrated its 24th anniversary in 2019, Java has experienced a consistent development in its programming efficiency for decades.
+
+        Java has a design that incorporates flexibility, allowing developers to write code that would be able to run on any machine or device, irrespective of its architecture or platform. It is one of the most popular programming languages around the globe and is introduced to keep running on any stage consistently.
+
+        According to the Java home page, more than 1 billion computers and 3 billion mobile phones worldwide use Java for application development.
+
+Q5)Write a Java Application which prints your details?
+
+class Personalinfo {
+    public static void main(String[] args) {
+        System.out.println("Name : Mane Sudarshan");
+        System.out.println("Father’s Name : Mane Rajendra");
+        System.out.println("Mother ‘s Name : Mane Sangita");
+        System.out.println("Age : 21");
+        System.out.println("Mobile No.:9370105149");
+        System.out.println("Mobile No.:9370105149");
+        System.out.println("Gender : Male");
+        System.out.println("Address : Pune");
+    }
+}

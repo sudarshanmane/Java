@@ -1,0 +1,52 @@
+package evaluation3;
+
+public class OLA {
+	
+	Car car = new Car();
+	
+	public Car bookCar(int numberOfPassenger, int numberOfKMs) {
+		
+		car.numberOfPassenger = numberOfPassenger;
+		car.numberOfKms = numberOfKMs;
+
+		
+		
+		if(numberOfPassenger <= 3) {
+			
+			return new  HatchBack();
+			
+		}else {
+
+			return new  Sedan();
+			
+		}
+		
+	}
+	
+	
+	public int calculateBill(Car car) {
+		
+		
+		
+		if(car instanceof HatchBack) {
+			HatchBack back = (HatchBack) car;
+			
+			int TotalFare = back.numberOfKms*back.farePerKm;
+
+			return TotalFare;
+		}
+		else{
+			Sedan sedan= (Sedan) car;
+			
+			int TotalFare = sedan.numberOfKms*sedan.farePerKm;
+
+			return TotalFare;
+		}
+
+
+
+		
+	}
+
+
+}

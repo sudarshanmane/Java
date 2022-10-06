@@ -1,0 +1,30 @@
+package Question1;
+
+public class Mian {
+	
+	public static void getNoise(Animal animal) {
+		
+		animal.makeNoise();
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		
+		
+		getNoise(new Dog());
+		getNoise(new Cat()
+				);
+
+		
+		
+		
+	
+
+		
+
+
+	}
+
+}

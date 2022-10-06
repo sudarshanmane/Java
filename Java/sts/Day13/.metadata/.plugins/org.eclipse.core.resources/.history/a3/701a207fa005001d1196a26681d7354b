@@ -1,0 +1,14 @@
+
+public class Demo {
+	
+	
+	
+	public static void main(String[] args) {
+		
+		Items items = Items.BEARDO
+				;
+		System.out.println(items.price);
+		
+	}
+
+}

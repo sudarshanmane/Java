@@ -1,0 +1,24 @@
+package PassingLambda;
+
+public class ReturnLambda {
+
+	public static void main(String[] args) {
+		
+		returningLambda().sayHellow("D");
+
+
+	}
+	
+	public static returnLambda returningLambda() {
+		
+		returnLambda lambda = name -> System.out.println("Hello " + name);
+		return lambda;
+	}
+
+}
+
+interface returnLambda {
+	
+	abstract void sayHellow(String name);
+	
+}

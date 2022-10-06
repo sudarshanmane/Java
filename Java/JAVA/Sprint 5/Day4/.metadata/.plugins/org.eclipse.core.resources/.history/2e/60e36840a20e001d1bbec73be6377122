@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public  class Main {
+
+	public static void main(String[] args) {
+		
+		PrintList printList = (List<String> city ) -> {
+			
+		System.out.println(city);
+		
+		};		
+		
+		List<String> one = new ArrayList<>();
+		one.add(null);
+		one.add("Pune");
+		one.add("Mumbai");
+		
+		printList.display(one);
+		
+		
+
+	}
+
+}

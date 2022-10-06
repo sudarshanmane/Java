@@ -1,0 +1,12 @@
+Qiestion 1) Explain the difference between dynamic polymorphism and dynamic binding ?
+
+     Dynamic polymorphism is about overriding the methods from the parent class and and with the
+     help of dynamic poymorphism that is ovverriding we can reduce the code.when we create
+     object of the parent class with the help child class and when we invoke the overriden methods 
+     the first prefference will get to the chaid class methods.
+ 
+     Dynamic binding is not a type of polymorphism; rather dynamic binding is how polymorphism
+     is "implemented" or how it works. And dynamic binding and runtime binding are the same thing.
+     it can also be called "late binding".when we create the obect of parent class inside the child
+     class then whith the help of that object we call to the different methods that is called the    
+     dynamic binding.

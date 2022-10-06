@@ -1,0 +1,19 @@
+
+public class ICICIBank extends Bank {
+	
+	
+	double rateOfInterest;
+
+	
+	@Override
+	void displayDetails() {
+		
+		System.out.println("icic bank " + rateOfInterest);
+		super.displayDetails();
+	}
+
+
+	
+	
+
+}

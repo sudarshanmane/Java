@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+
+public class CollectArray {
+
+	
+public static void main(String[] args) {
+		
+		ArrayList al = new ArrayList();
+		System.out.println(al);
+		System.err.println(al.size());
+		
+		
+	}
+
+}

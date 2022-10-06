@@ -1,0 +1,9 @@
+package Question4;
+
+public class MyGeneric<E> {
+
+	E get(){
+		
+	}
+	
+}

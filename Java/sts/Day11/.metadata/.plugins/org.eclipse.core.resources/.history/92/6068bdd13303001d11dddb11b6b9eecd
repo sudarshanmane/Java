@@ -1,0 +1,41 @@
+package TwoDay;
+
+public class Demo {
+	
+	public Hotel provideFood(int amount) {
+		Hotel hotel = null;
+		
+		if(amount>500) {
+			hotel =new  TajHotel();
+			
+		}else if(amount>200 && amount<=500) {
+			hotel = new RoadSideHotel();
+		}
+		
+		return hotel;
+		
+	}
+	
+	public static void  main(String[] args) {
+		
+		Demo demo = new Demo();
+		
+		Hotel hotel = demo.provideFood(500);
+		
+		hotel.chikenBiryani();
+		
+//		if(hotel instanceof TajHotel) {
+//			
+//			TajHotel tajHotel = (TajHotel) hotel;
+//			
+//		}
+//		else {
+//		RoadSideHotel	roadSide = (RoadSideHotel) hotel;
+//			
+//		}
+		
+		
+		
+	}
+
+}

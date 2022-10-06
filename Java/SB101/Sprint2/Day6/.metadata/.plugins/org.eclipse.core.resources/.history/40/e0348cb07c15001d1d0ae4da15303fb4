@@ -1,0 +1,59 @@
+package Question2;
+
+public class Question3 {
+	
+	public static void main(String[] args) {
+		
+		Thread1  a = new Thread1();
+		Thread2  b = new Thread2();
+//
+//		a.start();
+//		b.start();
+		
+		try {
+			a.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}
+
+
+class Thread1 extends Thread{
+	
+	
+	@Override
+	public void run() {
+
+		for(int a  = 1 ; a<=20; a++) {
+			if( a%2 == 0) {
+				System.out.println(a);
+			}
+		}
+	
+		
+	}
+	
+	
+}
+
+
+class Thread2 extends Thread{
+	
+	
+	@Override
+	public void run() {
+
+		for(int a  = 1 ; a<=20; a++) {
+			if( a%2 == 1) {
+				System.out.println(a);
+			}
+		}
+	
+		
+	}
+	
+	
+}

@@ -1,0 +1,39 @@
+package Q2;
+
+import java.util.Scanner;
+
+public class Demo {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter arr size");
+		
+		int num = sc.nextInt();
+		
+		int[] arr = new int[num];
+		for(int a = 0;a<num;a++) {
+			arr[a] = sc.nextInt();
+		}
+		System.out.println("Enter index number");
+	
+		int numb = sc.nextInt();
+		System.out.println(numb);
+		
+		try {
+			System.out.println("");
+		}catch (Exception e) {
+			
+			if(e instanceof ArrayIndexOutOfBoundsException) {
+				System.out.println("ArrayIndexOutOfBoundsException");
+			}else {
+				System.out.println("Error");
+			}
+			
+			
+		}
+		
+		
+	}
+
+}

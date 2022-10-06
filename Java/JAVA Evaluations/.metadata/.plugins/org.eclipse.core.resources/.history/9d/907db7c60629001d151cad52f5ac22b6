@@ -1,0 +1,45 @@
+package Q3;
+
+import java.util.Scanner;
+
+public class Demo {
+	
+	void showDetails(Month m){
+		
+		if(m ==Month.MARCH) {
+			System.out.println("March");
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter the Month");
+		
+		String month = input.next().toLowerCase();
+		
+	try {
+			
+//			Month month1 = Month.valueOf(month);
+//			Demo d = new Demo();
+//			d.showDetails(month1);
+		
+		Month month2 = Month.valueOf(month);
+		Demo d = new Demo();
+		d.showDetails(month2);
+
+		}catch(IllegalArgumentException i) {
+			
+			System.out.println("Invalid Month Name");
+			
+		}
+		
+		
+		
+		
+	}
+
+
+}

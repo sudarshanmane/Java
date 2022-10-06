@@ -1,0 +1,22 @@
+package Question6;
+
+public class RunLambda {
+
+	public static void main(String[] args) {
+		
+		getOutPut().calculate(10, 0, 0);
+		
+		
+	}
+	
+	public static Calculator getOutPut() {
+		
+		return (a, b, c) -> System.out.println(a+b+c);
+	}
+
+}
+
+interface Calculator {
+	
+	void calculate(int a,int b,int c);
+}

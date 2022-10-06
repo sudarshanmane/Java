@@ -1,0 +1,35 @@
+package Question6;
+
+public class PassingLambda {
+
+	public static void main(String[] args) {
+		
+		getOutput(10,10,10,(a, b, c) -> a+b+c);
+		
+	   getOutCome(10, 2, 2, (a, b, c) -> a-b-c);
+		
+		
+		
+
+	}
+	
+     public static int getOutput(int a, int b,int c,Calculator operation) {
+    	 
+    	 return operation.getOutput(a, b, c);
+    	 
+	}
+     
+     public static int getOutCome(int a,int b,int c,Calculator substraction) {
+    	 
+    	 return substraction.getOutput(a, b, c);
+     }
+
+}
+
+
+interface Calculator{
+	
+	 int getOutput(int a, int b,int c);
+
+	
+}

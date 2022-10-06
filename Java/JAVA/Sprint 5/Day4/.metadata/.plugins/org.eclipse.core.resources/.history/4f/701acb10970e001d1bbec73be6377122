@@ -1,0 +1,42 @@
+package LamdaExpressions;
+
+public class FunctionalnterfaceDemo {
+	
+	
+	public static void main(String[] args) {
+		MyInterface interface1 = new MyClass();
+		
+//		interface1.sayHellow("Ashok");
+		
+		MyInterface interface2 = new MyClass() {
+			
+			@Override
+			public void sayHellow(String name) {
+				System.out.println("Welcome " + name );
+				
+			}
+			
+		};
+		
+	
+	}
+	
+}
+
+@FunctionalInterface
+
+interface MyInterface{
+	
+	abstract  void sayHellow(String name);	
+}
+
+class MyClass implements MyInterface{
+
+	@Override
+	public void sayHellow(String name) {
+		System.out.println("Welcome " + name );
+		
+	}
+	
+}
+

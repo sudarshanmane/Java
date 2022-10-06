@@ -1,0 +1,23 @@
+
+public class AccountDemo {
+
+	public static void main(String[] args) {
+		
+		Account account = new Account("5232615216");
+		
+		try {
+			
+			account.deposit(1000);
+		    
+			System.out.println("amount after withdraw is : " + (account.withdraw(1001)));
+			
+		}catch(InsufficientFundsException isfe) {
+			
+			System.out.println(isfe.getMessage());
+			
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,44 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		List<Product> list = Arrays.asList(
+				new Product(101, "Ganesh", 110),
+				new Product(102, "RAJU", 101),
+				new Product(103, "Mahesh", 99));
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Num");
+		
+		int num = sc.nextInt();
+		
+//		if(num == 1) {
+//			
+//			Set<Product> products = new TreeSet<>(new Price());
+//			
+//			for(int a = 0;a<list.size();a++) {
+//				products.add(list.get(a));
+//			}
+//			
+//			
+//			for(Product product : products) {
+//				
+//				System.out.println(product);
+//				
+//			}
+//			
+//		}
+		
+		
+
+	}
+
+}

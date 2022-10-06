@@ -1,0 +1,15 @@
+package ;
+
+
+public class _3Collable {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+class MyCollale implements Collable{
+
+	
+}

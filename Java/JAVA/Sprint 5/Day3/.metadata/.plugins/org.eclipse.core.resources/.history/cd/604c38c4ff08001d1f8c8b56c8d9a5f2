@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+
+public class IntCheck {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> i = new ArrayList<>();
+		i.add(10);
+		i.add(20);
+		i.add(30);
+		i.add(40);
+		i.add(50);
+		i.add(60);
+		i.set(2, 25);
+		System.out.println(i.get(2));
+		System.out.println(i.contains(50));
+
+
+	}
+
+}

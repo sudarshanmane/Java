@@ -1,0 +1,30 @@
+
+public class TemporaryEmployee extends Employee{
+
+	int hoursWorked;
+	int hourlyWages;
+	
+	public TemporaryEmployee(int employeeId, String employeeName,int hoursWorked, int hourlyWages) {
+		
+		super(employeeId, employeeName);
+		this.hoursWorked = hoursWorked;
+		this.hourlyWages = hourlyWages;
+		
+	}
+
+
+
+	
+	
+
+
+	@Override
+	void calculateSalary() {
+		
+		int salary = this.hoursWorked * this.hourlyWages;
+		setSalary(salary);
+		
+		
+	}
+
+}

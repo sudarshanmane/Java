@@ -1,0 +1,71 @@
+package Questi;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+
+class Main {
+	
+	public static void main(String[] args) {
+
+		List<Student1> list = Arrays.asList(
+				new Student1(101, "onw", 98),
+				new Student1(101, "onw", 250),
+				new Student1(101, "onw", 258),
+				new Student1(101, "onw", 260));
+		
+		
+		List<Student1> list2 =list.stream().filter(item -> item.getMarks() > 250).collect(Collectors.toList());
+		System.out.println(list2);
+		
+		
+	}
+}
+
+
+public class Student1 {
+	
+	int  roll;
+	String name;
+	int marks;
+	public int getRoll() {
+		return roll;
+	}
+	public void setRoll(int roll) {
+		this.roll = roll;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getMarks() {
+		return marks;
+	}
+	public void setMarks(int marks) {
+		this.marks = marks;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Student [roll=" + roll + ", name=" + name + ", marks=" + marks + "]";
+	}
+	
+	
+	public Student1(int roll, String name, int marks) {
+		super();
+		this.roll = roll;
+		this.name = name;
+		this.marks = marks;
+	}
+	
+	
+	
+	
+	
+	
+
+}

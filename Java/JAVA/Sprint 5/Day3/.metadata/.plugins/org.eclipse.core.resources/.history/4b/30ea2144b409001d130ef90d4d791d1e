@@ -1,0 +1,26 @@
+
+public class Loan {
+
+	
+	public double calculateLoanAmount(Employee employeeObj) {
+	
+		
+		double loan =0;
+		
+		if(employeeObj instanceof PermanentEmployee) {
+			
+			PermanentEmployee permanentEmployee = new PermanentEmployee(employeeObj., null, loan)
+			loan =  employeeObj.getSalary()*15/100;			
+			
+		}
+		else {
+			loan = employeeObj.getSalary()*10/100;	
+		}
+		
+		
+		return loan;
+	}
+	
+	
+	
+}

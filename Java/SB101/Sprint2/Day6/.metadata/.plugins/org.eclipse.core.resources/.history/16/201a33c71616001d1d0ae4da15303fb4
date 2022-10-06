@@ -1,0 +1,34 @@
+package Question2;
+
+public class JustPractice {
+	
+	public static void main(String[] args) {
+		
+		Commonn common = new Commonn("dfghbj");
+		Thread thread= new Thread(common);
+		thread.start();
+		
+	}
+	
+
+}
+
+
+class Commonn  implements Runnable{
+	
+	String name ;
+	public Commonn(String name) {
+		
+		this.name = name;
+	}
+
+	@Override
+	public void run() {
+		synchronized (Common.class) {
+			
+			System.out.println(name);
+			
+		}
+		
+	}
+}

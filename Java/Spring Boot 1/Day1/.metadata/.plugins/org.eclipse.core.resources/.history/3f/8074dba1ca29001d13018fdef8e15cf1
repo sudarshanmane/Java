@@ -1,0 +1,27 @@
+package QueSection;
+
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class Demo {
+	
+	public static void main(String[] args) {
+		
+		Queue<Integer> integers = new  PriorityQueue<>();
+		
+		integers.add(10);
+		integers.add(14);
+		integers.add(12);
+		integers.add(13);
+		
+		Integer i1;
+		
+		while( (i1 = integers.poll()) != null) {
+			System.out.println(i1);
+		}
+
+		
+		
+	}
+
+}

@@ -1,0 +1,27 @@
+package CityNames;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.jcp.xml.dsig.internal.MacOutputStream;
+
+public class City {
+	
+	public static void main(String[] args) {
+		
+		Map<String,String> map = new HashMap<>();
+		map.put("one", "two");
+		map.put("two", "Three");
+		
+		Set<Map.Entry<String, String>> set = map.entrySet();
+		
+		
+		set.forEach(item -> System.out.println(item));
+
+	}
+
+}

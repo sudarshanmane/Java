@@ -1,0 +1,17 @@
+package CreatngThread;
+
+public class ThreadStateLifeCycle {
+
+	public static void main(String[] args) {
+		
+		Thread thread = new Thread(() -> {
+			System.out.println("thread Running");
+			
+			Thread.sleep(1000);
+		});
+		
+		thread.start();
+ 	}
+	}
+
+}

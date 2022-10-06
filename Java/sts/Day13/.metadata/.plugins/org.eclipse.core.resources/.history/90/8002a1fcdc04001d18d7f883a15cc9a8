@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Demo {
+	
+	static void printDetails(Items items) {
+		
+		items.message(items);
+		
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("EnterItem Name");
+		String item = input.next();
+		
+		Items items = Items.valueOf(item.toUpperCase());
+		items.message(items);
+		
+	    
+		
+		
+
+	}
+
+}

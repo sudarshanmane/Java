@@ -1,0 +1,13 @@
+
+public class Demo {
+	
+	
+	
+	public static void main(String[] args) {
+		
+		Items items = Items.SOAP;
+		System.out.println(items.price);
+		
+	}
+
+}

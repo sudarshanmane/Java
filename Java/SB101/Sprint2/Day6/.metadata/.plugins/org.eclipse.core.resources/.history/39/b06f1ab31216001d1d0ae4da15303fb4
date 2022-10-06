@@ -1,0 +1,45 @@
+package Question2;
+
+public class ThreadPool {
+	
+    public static void main(String[] args) {
+		
+    	Common common= new Common();
+    	Thread thread = new Thread(common , "Pawan");
+    	
+	}
+
+}
+
+class Common implements Runnable{
+	Common common;
+	String name;
+	
+	
+	public Common(Common common,String name) {	
+		
+		this.name = name;
+		this.common =common;
+		
+	}
+	
+
+	public Common() {
+		
+	}
+	
+	@Override
+	public void run() {
+		
+		synchronized (common) {
+			
+			System.out.println(name);
+			
+		}
+		
+
+		
+	}
+	
+	
+}

@@ -1,0 +1,22 @@
+package firdt;
+
+public class Demo {
+
+	
+	public  X funDemo(){
+		System.out.println("inside funDemo of Demo");
+		
+		return new Ximpl();
+	}
+	
+	public static void main(String[] args) {
+		
+		Demo demo = new Demo();		
+		
+		X x1  = demo.funDemo();
+		
+		x1.fun1();
+		x1.fun2();
+
+	}
+}

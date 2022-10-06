@@ -1,0 +1,63 @@
+import java.awt.Adjustable;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class Demo {
+	
+	public boolean validate(String name, String mobileNum, String aadharCard) {
+		
+		 boolean nameC = false ;
+		 
+		   nameC  = name.matches("[a-zA-Z]{3,8}");
+		    
+			nameC = aadharCard.matches("[0-9]{12}");
+			
+			nameC = mobileNum.matches("[6789]{1}[0-9]{9}");
+			
+		
+		
+		return nameC;
+		
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in); 
+		
+//		System.out.println("Enter name");
+//		String name = input.nextLine();
+//		
+//		System.out.println("Enter aadharNumber");
+//		String aadharNumber = input.nextLine();
+//		
+//		
+//		System.out.println("Enter mobileNumber");
+//		String mobileNumber = input.nextLine();
+//		
+//		Citizen citizen = new Citizen();
+//		citizen.setName(name);	
+//		citizen.setAadharNumber(aadharNumber);	
+//		citizen.setMobileNumber(mobileNumber);	
+//		
+//		
+		Demo d = new Demo();
+		
+//		boolean res = d.validate(citizen.getName(),citizen.getMobileNumber(), citizen.getAadharNumber());
+		
+		boolean name1 = true ;
+		
+		boolean check = "Pawan".matches("[a-zA-Z]{3,8}");
+		System.out.println(check);
+		
+		
+		
+		
+	}
+
+	
+	
+
+}

@@ -1,0 +1,33 @@
+package lect1;
+
+public class InterThread {
+	
+	public static void main(String[] args) {
+		
+		MyThread mt = new MyThread();
+		myThread.start();
+		
+		synchronized (mt) {
+			mt.wait();
+			
+		}
+		
+		System.out.println(mt.total);
+		
+		 
+		
+	}
+
+}
+
+
+class MyThread extends Thread{
+	
+	
+	int total = 0;
+	@Override
+	public void run() {
+		
+		total = 1000;
+	}
+}

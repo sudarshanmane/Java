@@ -1,0 +1,31 @@
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+public class CollationApp {
+	
+	public static void main(String[] args) {
+		
+		List<String> list = Arrays.asList("a" , "b" ,"c" ,"d");
+		
+//		for(String l : list) {
+//			System.out.println(l);
+//		}
+		
+		Iterator<String>  iterator = list.iterator();
+		
+		while(iterator.hasNext()) {
+			String string = iterator.next();
+			
+			if(string.equals("c")) {
+                  iterator.remove();
+
+			}
+			System.out.println(string);
+		}
+
+		
+		
+	}
+
+}

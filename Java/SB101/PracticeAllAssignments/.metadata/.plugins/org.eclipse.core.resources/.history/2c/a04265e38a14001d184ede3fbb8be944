@@ -1,0 +1,99 @@
+package RaceObjectLevelConditionPrictice;
+
+public class SynchronizedBlock {
+	
+	public static void main(String[] args) {
+		
+		
+		Commonn common= new Commonn();
+		
+		ThreadA a = new ThreadA(common,"Ram");
+		ThreadB b = new ThreadB(common,"Shyam");
+		a.start();
+		b.start();
+	}
+	
+
+
+}
+
+
+
+
+class Commonn {
+	
+	
+	
+	
+	public void methodWithSynchronizedBlock(String name) {
+		
+        
+		System.out.println("into critical section");
+		synchronized (this) {
+			
+        System.out.println("welcome");
+
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println(name);
+		}
+		
+		System.out.println("not into critical section");
+
+
+	
+	}
+	
+	
+	
+}
+
+class ThreadA extends Thread{
+	
+	String name;
+	Commonn common;
+	
+	public ThreadA(Commonn common ,String name) {
+		this.common = common;
+		this.name =name;
+		
+	}
+	
+	
+	
+	@Override
+	public void run() {
+		
+		common.methodWithSynchronizedBlock(name);
+		
+	}
+	
+}
+
+
+class ThreadB extends Thread{
+	
+
+	String name;
+	Commonn common;
+	
+	public ThreadB(Commonn common ,String name) {
+		this.common = common;
+		this.name =name;
+		
+	}
+	
+
+	@Override
+	public void run() {
+		
+		common.methodWithSynchronizedBlock(name);
+		
+	}
+	
+	
+}
+

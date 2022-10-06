@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class Demo {
+
+	static void printDetails(Items items) {
+
+		int check = 0;
+		
+		Items[]  items2 = Items.values();
+		
+		for(Items items3 : items2) {
+			
+			if(items3 == items) {
+				check =1;
+			}
+		}
+		
+			if( check == 1 ) {
+				items.message(items);
+			}
+			else {
+				System.out.println("Please  provide the right Details");
+				
+			}
+			
+		
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+				
+		for(int a = 0;a<5;a++) {
+			
+			System.out.println("EnterItem Name");
+			String item = input.next();
+			
+			String ch = ((item.toUpperCase()));
+
+			
+		if(ch == "FACEPACK" || ch == "SUGAR" || ch == "MILK" || 
+				ch =="PEN" ||ch ==  "SOAP") {
+			
+			Items items = Items.valueOf(ch);
+			
+			printDetails(items);
+		}
+		else {
+			System.out.println("Item not available");
+		}
+		
+		}
+
+		
+		  
+		  
+		
+		
+	    
+		
+		
+
+	}
+
+}

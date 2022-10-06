@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+
+public class CollectArray {
+
+	
+public static void main(String[] args) {
+		
+		ArrayList al = new ArrayList();
+		
+		al.add("One");
+		al.add("two");
+		
+		al.add(0);
+		System.out.println(al);
+		
+		
+	}
+
+}

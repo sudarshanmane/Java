@@ -1,0 +1,25 @@
+package productId;
+
+import java.util.PriorityQueue;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+
+//		PriorityQueue<Product> priorityQueue = new PriorityQueue<>();
+		
+		PriorityQueue<Product>  priorityQueue = new PriorityQueue<>();
+		
+		priorityQueue.add(new Product(1, "One", 100));
+		priorityQueue.add(new Product(2, "Four", 99));
+		priorityQueue.add(new Product(3, "Three", 10));
+		priorityQueue.add(new Product(4, "Two", 88));
+		
+		System.out.println(priorityQueue);
+
+		
+	}
+		
+
+}

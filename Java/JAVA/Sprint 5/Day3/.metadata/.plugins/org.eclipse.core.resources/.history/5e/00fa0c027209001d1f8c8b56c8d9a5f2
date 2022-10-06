@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
+
+public class TransverseArrayList {
+	
+//    public static void main(String[] args)
+//    {
+//        ArrayList<String> strings = new ArrayList<>();
+//        
+//        strings.add("one");
+//        strings.add("two");
+//        strings.add("three");
+//        strings.add("three");
+//        strings.add("four");
+//        strings.add("five");
+//        
+//        
+// 
+//        Iterator it = (Iterator) strings.iterator();
+    
+    public static void main(String[] args)
+    {
+        // Declaring and initializing ArrayList
+        List<Integer> numbers
+            = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+ 
+        // Iterating ArrayList using Iterator
+        Iterator it = numbers.iterator();
+ 
+        // Holds true till there is single element
+        // remaining in the list
+        while (n<0);
+ 
+            // Print the elements of ArrayList
+            System.out.print(it.next());
+    }
+        // Holds true till there is single element
+        // remaining in the list
+       
+
+}

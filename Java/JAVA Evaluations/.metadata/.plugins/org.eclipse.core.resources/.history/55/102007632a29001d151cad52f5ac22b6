@@ -1,0 +1,28 @@
+package ProductQ3;
+
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Map<Student,Integer> args = new  TreeMap<>();
+		args.put(new Student(1, "b", 1) , 100);
+		args.put(new Student(2, "a", 2) , 120);
+		args.put(new Student(1, "c", 1) , 130);
+		
+		
+		Set<Map.Entry<Student, Integer>> entries = args.entrySet();
+		
+		entries.forEach(item -> System.out.println(item.getKey()));
+		
+		
+		
+		
+		
+		
+		
+	}
+}

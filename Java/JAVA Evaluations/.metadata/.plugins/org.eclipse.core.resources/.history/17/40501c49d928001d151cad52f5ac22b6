@@ -1,0 +1,9 @@
+package Q2;
+
+public class Eployee {
+	
+	public int calculateAverage(int[] age){
+		
+	}
+
+}

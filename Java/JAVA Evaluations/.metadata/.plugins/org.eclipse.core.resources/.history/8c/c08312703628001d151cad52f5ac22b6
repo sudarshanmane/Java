@@ -1,0 +1,24 @@
+
+public class Student {
+
+	
+	int rollNumber;
+	String studentName;
+	int marks;
+	
+	public Student() {
+		
+	}
+	
+	
+	
+	
+	
+	
+
+	public static void main(String[] args) {
+		
+		
+	}
+	
+}
